@@ -73,7 +73,7 @@ function UserList() {
       <div className="App">
         <Navbar bg="primary" variant="dark">
           <Container>
-            <Navbar.Brand href="#home">🙋 Random Users</Navbar.Brand>
+            <Navbar.Brand href="#home">🙋 Random Users App</Navbar.Brand>
           </Container>
         </Navbar>
         <Container fluid={true} style={{ padding: "1rem" }}>
