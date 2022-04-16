@@ -7,10 +7,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Spinner from "react-bootstrap/Spinner";
 import Navbar from "react-bootstrap/Navbar";
+import { Form, FormControl } from "react-bootstrap";
 function UserList() {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(10);
+  const [inputpage, setInputpage] = useState('');
 
   const loadUser = async () => {
     async function getData() {
@@ -58,22 +60,41 @@ function UserList() {
       loadUser();
       setLoading(false);
     }, 2000);
-  },[]);
+  }, []);
 
-  function getUsers() {
+  const getUsers = () => {
     setLoading(true);
     setTimeout(() => {
       loadUser();
       setLoading(false);
     }, 2000);
+  };
+  const setUserAdd = (e) => {
+    setPage(inputpage);
+  };
+  function handleChange(evt) {
+    const value = evt.target.value;
+    setInputpage(
+      value
+    );
+  
   }
-
   return (
     <>
       <div className="App">
         <Navbar bg="primary" variant="dark">
           <Container>
-            <Navbar.Brand href="#home">🙋 Random Users App</Navbar.Brand>
+            <Navbar.Brand href="#home">🙋 Random Users </Navbar.Brand>
+            <Form className="d-flex">
+              <FormControl
+                type="text"
+                placeholder="Set number add"
+                className="me-2"
+                value={inputpage}
+                onChange={handleChange}
+              />
+              <Button variant="success" onClick={setUserAdd}>Set</Button>
+            </Form>
           </Container>
         </Navbar>
         <Container fluid={true} style={{ padding: "1rem" }}>
@@ -99,7 +120,7 @@ function UserList() {
             <Col xs={4} md={5}></Col>
             <Col xs={4} md={2} align="center">
               <Button variant="primary" onClick={getUsers}>
-                Add 10 users
+                Add {page} users
               </Button>
             </Col>
           </Row>
