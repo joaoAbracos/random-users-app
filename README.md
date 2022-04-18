@@ -36,3 +36,4 @@ The App.js render UserList component.
   - When the aplication runs for the first time, it will run loadUser() function that add to list the first 10 users.
   - The Loading spinner is fire when the use try to add more users to the list.
   - The Button fires a function getUsers() that will add more users to the list
+  - You can also set the number of new random users to the list, in the input of the NavBar
