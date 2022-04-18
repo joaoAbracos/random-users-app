@@ -37,3 +37,7 @@ The App.js render UserList component.
   - The Loading spinner is fire when the use try to add more users to the list.
   - The Button fires a function getUsers() that will add more users to the list
   - You can also set the number of new random users to the list, in the input of the NavBar
+
+### `User.js`
+  - It render the information about a specific user
+  - that came as props
