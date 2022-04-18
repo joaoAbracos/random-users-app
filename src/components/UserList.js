@@ -87,11 +87,12 @@ function UserList() {
             <Navbar.Brand href="#home">🙋 Random Users </Navbar.Brand>
             <Form className="d-flex">
               <FormControl
-                type="text"
+                type="number"
                 placeholder="Set number add"
                 className="me-2"
                 value={inputpage}
                 onChange={handleChange}
+                onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
               />
               <Button variant="success" onClick={setUserAdd}>Set</Button>
             </Form>
