@@ -22,7 +22,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
   The you can also add users to the list.
   
 ## 📷 Screenshots
-![image](https://user-images.githubusercontent.com/88672593/163669971-7e33884e-a3af-4f0f-9a1f-6992f8af72dc.png)
+![image](https://user-images.githubusercontent.com/88672593/163672297-a7c39b33-875e-44b6-8212-9af40eab195c.png)
+
 
 ### `App.js`
 
