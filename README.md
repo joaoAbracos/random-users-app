@@ -40,4 +40,4 @@ The App.js render UserList component.
 
 ### `User.js`
   - It render the information about a specific user
-  - that came as props
+  - Data came as props
